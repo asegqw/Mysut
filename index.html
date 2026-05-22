@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESTO - Интернет-магазин экотоваров</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="script.js" defer></script>
+
+</head>
+<body>
+<div class="top-line">Zero Waste магазин ESTO - экологичные товары для дома, красоты и осознанной жизни</div>
+<header class="header">
+    <div class="container nav">
+        <a class="logo" href="index.html">ESTO</a>
+        <button class="icon-btn mobile-toggle" id="mobileToggle">Меню</button>
+        <nav class="menu" id="menu">
+            <a href="index.html">Главная</a>
+            <a href="catalog.html">Каталог</a>
+            <a href="favorites.html">Избранное</a>
+            <a href="cart.html">Корзина</a>
+            <a href="cabinet.html">Личный кабинет</a>
+            <a href="admin/index.html">Admin</a>
+        </nav>
+        <div class="nav-actions">
+            <button class="theme-toggle" data-theme-toggle>🌙</button>
+            <a class="icon-btn" href="favorites.html">♡</a>
+            <a class="icon-btn" href="cart.html">🛒 <span data-cart-count>0</span></a>
+            <a class="btn" href="login.html">Войти</a>
+        </div>
+    </div>
+</header>
+
+
+<main>
+<section class="hero">
+    <div class="container hero-grid">
+        <div class="hero-card">
+            <p class="eyebrow">Eco store / zero waste</p>
+            <h1>Эко товары для жизни без лишнего пластика</h1>
+            <p>ESTO помогает выбирать натуральные, безопасные и многоразовые товары для дома, красоты и ухода.</p>
+            <a class="btn" href="catalog.html">Смотреть каталог</a>
+            <a class="btn light" href="#popular">Популярное</a>
+        </div>
+        <div class="hero-visual"><div class="placeholder">Место для вашего баннера<br>assets/img/hero.jpg</div></div>
+    </div>
+</section>
+<section class="section">
+    <div class="container">
+        <div class="section-head"><div><p class="eyebrow">Категории</p><h2>Покупайте осознанно</h2></div><a class="btn ghost" href="catalog.html">Все товары</a></div>
+        <div class="categories">
+            <div class="category-card gsap-card"><b>Дом</b><p class="muted">Посуда, губки, хранение</p></div>
+            <div class="category-card gsap-card"><b>Красота</b><p class="muted">Уход, мыло, щетки</p></div>
+            <div class="category-card gsap-card"><b>Бытовая химия</b><p class="muted">Рефил и безопасные средства</p></div>
+            <div class="category-card gsap-card"><b>Лайфстайл</b><p class="muted">Шопперы и аксессуары</p></div>
+        </div>
+    </div>
+</section>
+<section class="section" id="popular">
+    <div class="container slider-wrap">
+        <div class="section-head"><div><p class="eyebrow">Хиты</p><h2>Слайдер товаров</h2></div></div>
+        <div class="product-slider" id="productSlider"></div>
+    </div>
+</section>
+<section class="section">
+    <div class="container features">
+        <div class="feature-card gsap-card"><h3>Без лишней упаковки</h3><p class="muted">Товары под refill и reuse.</p></div>
+        <div class="feature-card gsap-card"><h3>AJAX корзина</h3><p class="muted">Добавление без перезагрузки страницы.</p></div>
+        <div class="feature-card gsap-card"><h3>Kaspi</h3><p class="muted">Встроена заготовка ссылки оплаты.</p></div>
+        <div class="feature-card gsap-card"><h3>API</h3><p class="muted">JSON endpoints для React/Vue.</p></div>
+    </div>
+</section>
+</main>
+
+<footer>
+    <div class="container footer-grid">
+        <div><h2>ESTO</h2><p>Интернет-магазин экотоваров с философией осознанного потребления.</p></div>
+        <div><b>Разделы</b><p><a href="catalog.html">Каталог</a></p><p><a href="cart.html">Корзина</a></p></div>
+        <div><b>Контакты</b><p>Almaty, Kazakhstan</p><p>Telegram уведомления подключаются в api/order.php</p></div>
+    </div>
+</footer>
+</body>
+</html>

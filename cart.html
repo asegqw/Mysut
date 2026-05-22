@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина ESTO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="script.js" defer></script>
+
+</head>
+<body>
+<div class="top-line">Zero Waste магазин ESTO - экологичные товары для дома, красоты и осознанной жизни</div>
+<header class="header">
+    <div class="container nav">
+        <a class="logo" href="index.html">ESTO</a>
+        <button class="icon-btn mobile-toggle" id="mobileToggle">Меню</button>
+        <nav class="menu" id="menu">
+            <a href="index.html">Главная</a>
+            <a href="catalog.html">Каталог</a>
+            <a href="favorites.html">Избранное</a>
+            <a href="cart.html">Корзина</a>
+            <a href="cabinet.html">Личный кабинет</a>
+            <a href="admin/index.html">Admin</a>
+        </nav>
+        <div class="nav-actions">
+            <button class="theme-toggle" data-theme-toggle>🌙</button>
+            <a class="icon-btn" href="favorites.html">♡</a>
+            <a class="icon-btn" href="cart.html">🛒 <span data-cart-count>0</span></a>
+            <a class="btn" href="login.html">Войти</a>
+        </div>
+    </div>
+</header>
+
+
+<main class="container"><section class="page-hero"><p class="eyebrow">Cart</p><h1>Корзина</h1></section><div class="two-col"><section class="cart-list" id="cartList"></section><aside class="summary"><h2>Оформление</h2><p class="price" id="cartTotal">0 ₸</p><form class="form-grid" id="orderForm"><input class="field" name="name" placeholder="Имя" required><input class="field" name="phone" placeholder="Телефон" required><input class="field" name="address" placeholder="Адрес"><select class="field" name="payment_method"><option value="kaspi">Kaspi</option><option value="cash">Наличными</option></select><button class="btn">Оформить заказ</button><a class="btn light" id="kaspiLink" href="#" target="_blank" hidden>Перейти к оплате Kaspi</a></form></aside></div></main>
+
+<footer>
+    <div class="container footer-grid">
+        <div><h2>ESTO</h2><p>Интернет-магазин экотоваров с философией осознанного потребления.</p></div>
+        <div><b>Разделы</b><p><a href="catalog.html">Каталог</a></p><p><a href="cart.html">Корзина</a></p></div>
+        <div><b>Контакты</b><p>Almaty, Kazakhstan</p><p>Telegram уведомления подключаются в api/order.php</p></div>
+    </div>
+</footer>
+</body>
+</html>

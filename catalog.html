@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог ESTO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+<div class="top-line">Zero Waste магазин ESTO - экологичные товары для дома, красоты и осознанной жизни</div>
+<header class="header">
+    <div class="container nav">
+        <a class="logo" href="index.html">ESTO</a>
+        <button class="icon-btn mobile-toggle" id="mobileToggle">Меню</button>
+        <nav class="menu" id="menu">
+            <a href="index.html">Главная</a>
+            <a class="active" href="catalog.html">Каталог</a>
+            <a href="favorites.html">Избранное</a>
+            <a href="cart.html">Корзина</a>
+            <a href="cabinet.html">Личный кабинет</a>
+            <a href="admin/index.html">Admin</a>
+        </nav>
+        <div class="nav-actions">
+            <button class="theme-toggle" data-theme-toggle>🌙</button>
+            <a class="icon-btn" href="favorites.html">♡ <span data-fav-count>0</span></a>
+            <a class="icon-btn" href="cart.html">🛒 <span data-cart-count>0</span></a>
+            <a class="btn" href="login.html">Войти</a>
+        </div>
+    </div>
+</header>
+
+<main class="container">
+    <section class="page-hero">
+        <p class="eyebrow">Каталог</p>
+        <h1>Экотовары ESTO</h1>
+        <p class="muted">Все товары на одной странице. Выбирайте, добавляйте в корзину и сохраняйте в избранное.</p>
+    </section>
+
+    <form class="filters" id="filterForm">
+        <input class="field" name="search" placeholder="Поиск товара">
+        <select class="field" name="category">
+            <option value="">Все категории</option>
+            <option>Дом</option><option>Красота</option><option>Бытовая химия</option><option>Лайфстайл</option><option>Кухня</option><option>Ванная</option><option>Подарки</option>
+        </select>
+        <input class="field" name="min" type="number" placeholder="Цена от">
+        <input class="field" name="max" type="number" placeholder="Цена до">
+        <select class="field" name="sort">
+            <option value="new">По умолчанию</option>
+            <option value="price_asc">Сначала дешевые</option>
+            <option value="price_desc">Сначала дорогие</option>
+            <option value="title_asc">А-Я</option>
+        </select>
+        <button class="btn" type="submit">Применить</button>
+        <button class="btn ghost" type="button" id="resetFilters">Сбросить</button>
+    </form>
+
+    <div class="catalog-toolbar">
+        <p class="muted" id="catalogCount">25 товаров на странице</p>
+        <p class="muted">Кнопки «Купить», «В корзину» и «♡» работают через localStorage + AJAX-заготовки PHP.</p>
+    </div>
+
+    <section class="product-grid" id="productsGrid"></section>
+</main>
+
+<footer>
+    <div class="container footer-grid">
+        <div><h2>ESTO</h2><p>Интернет-магазин экотоваров с философией осознанного потребления.</p></div>
+        <div><b>Разделы</b><p><a href="catalog.html">Каталог</a></p><p><a href="cart.html">Корзина</a></p></div>
+        <div><b>Контакты</b><p>Almaty, Kazakhstan</p><p>Telegram уведомления подключаются в api/order.php</p></div>
+    </div>
+</footer>
+</body>
+</html>
