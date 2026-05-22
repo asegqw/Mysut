@@ -244,7 +244,7 @@ function initForms() {
   if (order) order.addEventListener('submit', e => {
     e.preventDefault();
     if (!getCart().length) return toast('Корзина пустая');
-    toast('Заказ оформлен. Kaspi и Telegram подключаются в api/order.php');
+    toast('Заказ оформлен.');
     const link = qs('#kaspiLink');
     if (link) { link.hidden = false; link.href = 'https://kaspi.kz/shop/'; }
   });
